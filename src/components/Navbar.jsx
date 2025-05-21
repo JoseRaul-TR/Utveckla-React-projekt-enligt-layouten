@@ -2,15 +2,9 @@ import { NavLink } from "react-router-dom";
 
 export default function Navbar() {
   return (
-    <nav className="navbar navbar-expand-lg navbar-dark bg-dark shadow-sm">
-      <div className="container-fluid">
-        <NavLink
-          to="/"
-          className="navbar-brand fw-bold text-light text-center text-lg-start"
-          style={{ textDecoration: "none" }}
-        >
-          Min App
-        </NavLink>
+    <nav className="">
+      <div className="">
+        <h2>Min App</h2>
 
         <button
           className="navbar-toggler"

@@ -7,7 +7,7 @@ import Sidebar from "./components/Sidebar";
 import Footer from "./components/Footer";
 import Header from "./components/HeaderComponent1";
 import TagList from "./components/TagListComponent2";
-import Home from "./components/Home";
+import PostsList from "./components/PostsListComponent3";
 
 import Services from "./pages/Services";
 import About from "./pages/About";
@@ -17,29 +17,32 @@ import Uppgift3 from "./pages/Uppgift3";
 
 function App() {
   return (
-      <div className="app-container">
-        <Navbar />
-        <Header />
+    <div className="app-container">
+      <Navbar />
+      <Header />
 
-        <div className="content-wrapper">
-          <Sidebar />
+      <div className="content-wrapper">
+        <Sidebar />
 
-          <main className="main-content">
+        <main className="main-content">
+          <div className="">
             <TagList />
-            {/* <Posts /> */}
-            <Routes>
-              <Route path="/" element={<Home />} />
-              <Route path="/services" element={<Services />} />
-              <Route path="/about" element={<About />} />
-              <Route path="/contact" element={<Contact />} />
-              <Route path="/uppgift2" element={<Uppgift2 />} />
-              <Route path="/uppgift3" element={<Uppgift3 />} />
-            </Routes>
-          </main>
-        </div>
+            <PostsList />
+          </div>
 
-        <Footer />
+          <Routes>
+            <Route path="/" element={<PostsList />} />
+            <Route path="/services" element={<Services />} />
+            <Route path="/about" element={<About />} />
+            <Route path="/contact" element={<Contact />} />
+            <Route path="/uppgift2" element={<Uppgift2 />} />
+            <Route path="/uppgift3" element={<Uppgift3 />} />
+          </Routes>
+        </main>
       </div>
+
+      <Footer />
+    </div>
   );
 }
 

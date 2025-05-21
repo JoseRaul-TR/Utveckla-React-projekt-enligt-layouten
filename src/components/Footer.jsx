@@ -2,19 +2,13 @@ import { NavLink } from "react-router-dom";
 
 export default function Footer() {
   return (
-    <footer className="bg-dark text-light py-3 mt-auto text-center">
-      <div className="container">
+    <footer className="">
+      <div className="">
+        <h6>Min App</h6>
         <p>
-          &copy; {new Date().getFullYear()}{" "}
-          <NavLink
-            to="/"
-            className="text-light"
-            style={{ textDecoration: "none" }}
-          >
-            Min App
-          </NavLink>
-          <br />
           José Raúl Tenza Ramírez – Alla rättigheter förbehållna
+          <br />
+          &copy; {new Date().getFullYear()}
         </p>
       </div>
     </footer>
