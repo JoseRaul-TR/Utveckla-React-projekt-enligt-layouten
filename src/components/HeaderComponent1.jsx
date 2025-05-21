@@ -1,4 +1,4 @@
-export default function Heaader() {
+export default function Header() {
     return (
         <header className="">
             <h1>
