@@ -7,6 +7,7 @@ export default function UnderConstruction() {
       <img
         src={perezosoImage}
         alt="Sengångare bild"
+        className="rounded-lg"
         style={{
           maxWidth: "300px",
           margin: "1rem 0",

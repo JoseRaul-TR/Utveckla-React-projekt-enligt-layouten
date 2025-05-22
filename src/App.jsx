@@ -5,9 +5,6 @@ import "./App.css";
 import Navbar from "./components/Navbar";
 import Sidebar from "./components/Sidebar";
 import Footer from "./components/Footer";
-import Header from "./components/HeaderComponent1";
-import TagList from "./components/TagListComponent2";
-import PostsList from "./components/PostsListComponent3";
 
 import Services from "./pages/Services";
 import About from "./pages/About";
@@ -17,21 +14,15 @@ import Uppgift3 from "./pages/Uppgift3";
 
 function App() {
   return (
-    <div className="app-container">
-      <Navbar />
-      <Header />
-
-      <div className="content-wrapper">
-        <Sidebar />
-
-        <main className="main-content">
-          <div className="">
-            <TagList />
-            <PostsList />
-          </div>
-
+    <div className="h-screen w-screen flex flex-col">
+      {/* Navbar always at the top with full width */}
+      <Navbar className="w-full"/>
+      {/* Container for Sidebar and Main */}
+      <div className="flex md:flex-row flex-col flex-grow">
+      <Sidebar />
+        <main className="flex flex-grow justify-center items-center p-4">
           <Routes>
-            <Route path="/" element={<PostsList />} />
+            <Route path="/" element={<Uppgift2 />} />
             <Route path="/services" element={<Services />} />
             <Route path="/about" element={<About />} />
             <Route path="/contact" element={<Contact />} />
@@ -40,7 +31,7 @@ function App() {
           </Routes>
         </main>
       </div>
-
+      {/* Footer always at the bottom with full width */}
       <Footer />
     </div>
   );
