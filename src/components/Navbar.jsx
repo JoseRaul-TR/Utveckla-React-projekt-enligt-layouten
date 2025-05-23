@@ -4,7 +4,7 @@ import { useState } from "react";
 export default function Navbar() {
   // State to manage the mobile menu's open/close state
   const [isOpen, setIsOpen] = useState(false);
-  // Function to toggle the mobile menu visibility 
+  // Function to toggle the mobile menu visibility
   const toggleMenu = () => {
     setIsOpen(!isOpen);
   };
@@ -14,7 +14,14 @@ export default function Navbar() {
       {/* Main navigation container */}
       <div className="flex items-center md:justify-between py-4 px-4 md:px-6 justify-center">
         {/* App title */}
-        <h2 className="text-xl font-semibold">Min App</h2>
+        <NavLink to="/uppgift1">
+          <h2
+            className="text-xl font-semibold hover:text-blue-500 transition duration-200"
+            style={{ textDecoration: "none" }}
+          >
+            Min App
+          </h2>
+        </NavLink>
 
         {/* Hamburger button for small screens with absolute positioning */}
         <div className="md:hidden absolute right-4">
