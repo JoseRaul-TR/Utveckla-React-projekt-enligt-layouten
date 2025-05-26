@@ -1,4 +1,4 @@
-import { NavLink } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 export default function Footer() {
   return (
@@ -6,11 +6,11 @@ export default function Footer() {
       <div className="flex items-center space-x-2">
         <p>&copy; {new Date().getFullYear()}</p>
         <span> – </span>
-        <NavLink to="/uppgift1" style={{ textDecoration: "none" }}>
+        <Link to="/uppgift1" style={{ textDecoration: "none" }}>
           <h6 className="font-semibold hover:text-blue-500 transition duration-200">
             Min App
           </h6>
-        </NavLink>
+        </Link>
       </div>
       <p className="text-center mt-2">
         José Raúl Tenza Ramírez – Alla rättigheter förbehållna

@@ -1,4 +1,4 @@
-import { NavLink } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 import { useState } from "react";
 
 export default function Navbar() {
@@ -14,14 +14,14 @@ export default function Navbar() {
       {/* Main navigation container */}
       <div className="flex items-center md:justify-between py-4 px-4 md:px-6 justify-center">
         {/* App title */}
-        <NavLink to="/uppgift1">
+        <Link to="/">
           <h2
             className="text-xl font-semibold hover:text-blue-500 transition duration-200"
             style={{ textDecoration: "none" }}
           >
             Min App
           </h2>
-        </NavLink>
+        </Link>
 
         {/* Hamburger button for small screens with absolute positioning */}
         <div className="md:hidden absolute right-4">
